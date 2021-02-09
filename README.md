@@ -2,13 +2,15 @@
 pygrid平台安装和测试
 
 ## 步骤
-- [安装dokcer](#docker安装)
-- [克隆pygrid代码](#克隆pygrid代码)
-- [创建node节点image](#node节点image)
-- [创建network节点image](#network节点image)
-- [修改compose文件](#修改compose文件)
-- [启动集群](#启动集群)
-- [测试](#测试)
+- [pygrid-test](#pygrid-test)
+  - [步骤](#步骤)
+  - [## docker安装](#-docker安装)
+  - [## 克隆pygrid代码](#-克隆pygrid代码)
+  - [## 创建node节点image](#-创建node节点image)
+  - [## 创建network节点image](#-创建network节点image)
+  - [## 修改docker-compose.yml文件](#-修改docker-composeyml文件)
+  - [## 启动集群](#-启动集群)
+  - [## 测试](#-测试)
 
 ## docker安装
 ---
@@ -61,5 +63,6 @@ docker-compose up
 执行测试
 ```
 conda activate pysyft   //  切换环境
-python pygrid-test.py   //执行代码
+python dataowner.py   //执行数据所有者的代码，上传数据
+python datascientist.py //执行数据科学家的代码，搜索数据并执行计算
 ```
