@@ -9,6 +9,7 @@ pygrid平台安装和测试
   - [## 创建node节点image](#-创建node节点image)
   - [## 创建network节点image](#-创建network节点image)
   - [## 修改docker-compose.yml文件](#-修改docker-composeyml文件)
+  - [## 修改etc/hosts文件](#-修改etchosts文件)
   - [## 启动集群](#-启动集群)
   - [## 测试](#-测试)
 
@@ -42,7 +43,26 @@ docker build ./apps/network/ -f ./apps/network/Dockerfile -t pygrid:network
 ## 修改docker-compose.yml文件
 ---
 openmined/grid-network:production改为grid:network
+
 openmined/grid-node:production改为grid:nodework
+
+## 修改etc/hosts文件
+---
+docker-compose集群使用了alice等域名，需要添加进host文件
+
+用管理员身份打开C:\Windows\System32\drivers\etc\hosts
+
+或则右键该文件，属性，修改普通user的操作权限
+
+复制下面内容进入并保存
+```
+127.0.0.1 network
+127.0.0.1 alice
+127.0.0.1 bob
+127.0.0.1 charlie
+127.0.0.1 dan
+```
+
 ## 启动集群
 ---
 查看node和network image是不是已经准备好了
