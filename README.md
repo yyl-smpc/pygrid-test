@@ -26,8 +26,9 @@ git clone git@github.com:OpenMined/PyGrid.git
 ```
 2.切换分支
 ```
+cd pygrid   //进入项目目录
 git branch  -a    //查看所有分支
-git checkout dev
+git checkout dev  //切换分支
 ```
 ## 创建node节点image
 ---
