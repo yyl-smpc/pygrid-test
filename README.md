@@ -82,7 +82,7 @@ docker-compose up
 
 执行测试
 ```
-conda activate pysyft   //  切换环境
+conda activate syft-test   //  切换环境
 python dataowner.py   //执行数据所有者的代码，上传数据
 python datascientist.py //执行数据科学家的代码，搜索数据并执行计算
 ```

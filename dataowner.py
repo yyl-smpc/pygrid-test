@@ -1,10 +1,9 @@
 import syft as sy
 from syft.grid.clients.data_centric_fl_client import DataCentricFLClient
-from syft.grid.clients.model_centric_fl_client import ModelCentricFLClient
 
 import torch as th
 hook = sy.TorchHook(th)
-bob = "http://bob:5001"
+bob = "http://bob:3000"
 hospital_datacluster = DataCentricFLClient(hook, bob)
 
 data_description = """Description:
