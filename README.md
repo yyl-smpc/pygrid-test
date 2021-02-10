@@ -42,9 +42,9 @@ docker build ./apps/network/ -f ./apps/network/Dockerfile -t pygrid:network
 ```
 ## 修改docker-compose.yml文件
 ---
-openmined/grid-network:production改为grid:network
+openmined/grid-network:production改为pygrid:network
 
-openmined/grid-node:production改为grid:nodework
+openmined/grid-node:production改为pygrid:nodework
 
 ## 修改etc/hosts文件
 ---
@@ -59,8 +59,8 @@ docker-compose集群使用了alice等域名，需要添加进host文件
 127.0.0.1 network
 127.0.0.1 alice
 127.0.0.1 bob
-127.0.0.1 charlie
-127.0.0.1 dan
+127.0.0.1 bill
+127.0.0.1 james
 ```
 
 ## 启动集群

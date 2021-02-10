@@ -1,11 +1,11 @@
 import syft as sy
-from syft.grid.public_grid import PublicGridNetwork
+from syft.grid.private_grid import PrivateGridNetwork
+from syft.grid.clients.data_centric_fl_client import DataCentricFLClient
 import torch as th
 hook = sy.TorchHook(th)
-grid_address = "http://network:5000"
-grid = PublicGridNetwork(hook, grid_address)
+bob = DataCentricFLClient(hook,'http://localhost:3000')
+grid = PrivateGridNetwork(bob)
 results = grid.search("#February", "#birth-records")
-print(results)
 feb_records = results['Bob'][0]
 
 def sum_column(dataset, column):
@@ -17,4 +17,4 @@ def sum_column(dataset, column):
 weight_sum = sum_column(feb_records, 1)
 avg_weight = weight_sum.get(user='Bob')/5
 
-print(weight_sum,avg_weight)
+print(avg_weight)
