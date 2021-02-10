@@ -44,7 +44,7 @@ docker build ./apps/network/ -f ./apps/network/Dockerfile -t pygrid:network
 ---
 openmined/grid-network:production改为pygrid:network
 
-openmined/grid-node:production改为pygrid:nodework
+openmined/grid-node:production改为pygrid:node
 
 ## 修改etc/hosts文件
 ---
